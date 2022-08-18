@@ -25,7 +25,7 @@ crontab -e
 ```
 Scroll to the bottom of the file and enter this line. Replace the path with the path to your python file.
 ```
-@reboot python3 /home/pi/code/music_playerv3.py
+@reboot python3 /home/pi/1950s-Radio-Restoration/music_playerv3.py
 ```
 ## Circuit
 ![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
