@@ -11,6 +11,15 @@ At the bottom of the file, enter this line. This will configure the audio DAC to
 ```
 dtoverlay=hifiberry-dac
 ```
+Now, copy the contents of the latest version of the music_player python file. Create a new python file on the Pi and paste this code into the file. Take note of the path to this file.
+Next, enter this command into the terminal making sure you don't use the sudo command at the front.
+```
+crontab -e
+```
+Scroll to the bottom of the file and enter this line. Replace the path with the path to your python file.
+```
+@reboot python3 /home/pi/code/music_playerv3.py
+```
 ## Circuit
 ![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
 
