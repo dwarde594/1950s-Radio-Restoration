@@ -34,4 +34,8 @@ Scroll to the bottom of the file and enter this line. Replace the path with the 
 ## Circuit
 ![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
 ## Downloading songs
-The best way of downloading songs onto the Pi is by using [FileZilla](https://filezilla-project.org/).
+The best way of downloading songs onto the Pi is by using [FileZilla](https://filezilla-project.org/). To connect to the Pi through FileZilla, you need to find the IP address. Use the command below to find the Pi's IP address.
+```
+hostname -I
+```
+Then, enter this IP address into FileZilla and connect to the Pi using SFTP. You can start adding songs into the /home/pi/Music directory under the Classical, Jazz, Rock, and Pop folders.
