@@ -12,5 +12,5 @@ At the bottom of the file, enter this line. This will configure the audio DAC to
 dtoverlay=hifiberry-dac
 ```
 ## Circuit
-![18_08_2022, 11_24 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185375196-f8e82732-51d0-492c-bce1-30104863d4cd.jpg)
+![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
 
