@@ -33,4 +33,5 @@ Scroll to the bottom of the file and enter this line. Replace the path with the 
 ```
 ## Circuit
 ![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
-
+## Downloading songs
+The best way of downloading songs onto the Pi is by using [FileZilla](https://filezilla-project.org/).
