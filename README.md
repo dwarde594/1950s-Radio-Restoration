@@ -29,4 +29,4 @@ Scroll to the bottom of the file and enter this line. Replace the path with the 
 ```
 ## Circuit
 ![18_08_2022, 11_40 Microsoft Lens](https://user-images.githubusercontent.com/101138000/185376244-e8c34fa1-5a1a-44f4-978c-682e9fd31c91.jpg)
-
+If you have any issues with the setup process, I will be happy to answer any questions in the comments.
