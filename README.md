@@ -11,7 +11,14 @@ At the bottom of the file, enter this line. This will configure the audio DAC to
 ```
 dtoverlay=hifiberry-dac
 ```
-Now, copy the contents of the latest version of the music_player python file. Create a new python file on the Pi and paste this code into the file. Take note of the path to this file.
+Make sure git is installed on your Raspberry Pi by typing this into the terminal.
+```
+sudo apt install git
+```
+Now, enter this command. Take note of the path to the python file.
+```
+git clone https://github.com/dwarde594/1950s-Radio-Restoration
+```
 Next, enter this command into the terminal making sure you don't use the sudo command at the front.
 ```
 crontab -e
