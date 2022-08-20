@@ -1,12 +1,10 @@
-#This version of the code works with crontab -e. V1 and v2 don't
-
 from os import listdir, system
 import pygame
 from random import randint
 from time import sleep
 from gpiozero import MCP3008, Button
 
-#Initiates pygame
+#Initiates pygame mixer
 pygame.mixer.init()
 
 
@@ -54,6 +52,8 @@ played_pieces = []
 speaker_volume = round(vol_potentiometer.value, 2)
 pygame.mixer.music.set_volume(speaker_volume)
 
+#Volume of tuning white noise
+tuning_volume = speaker_volume * (1/2)
 
 
 #Function that plays a new random piece
@@ -116,23 +116,25 @@ def shut_down():
     on = False
 
 
-#When the power button is pressed, shut the pi down
+#When the power switch is turned to off, shut the pi down
 power_button.when_released = shut_down
 
 
     
 #Function called when channel is changed
 def tune():
+    #Stops currently playing music
+    pygame.mixer.music.stop()
     
     #Sets temporary lower volume for the white noise
-    pygame.mixer.music.set_volume(0.05)
+    pygame.mixer.music.set_volume(tuning_volume)
     
-    #Loads and plays white noise for 3 seconds
+    #Loads and plays white noise for 1.5 second
     pygame.mixer.music.load("/home/pi/Music/white_noise.wav")
     pygame.mixer.music.play()
     
-    #Sleeps for 3 seconds
-    sleep(3)
+    #Sleeps for 1.5 second
+    sleep(1.5)
     
     #Resets volume to original value
     pygame.mixer.music.set_volume(speaker_volume)
@@ -149,8 +151,8 @@ new_piece()
 #Main loop
 while on == True:
     
-    #Sleeps for 0.05 seconds
-    sleep(0.05)
+    #Sleeps for 0.03 seconds
+    sleep(0.03)
     
     #Current tuning value of potentiometer
     current_tuning_value = round(tuning_potentiometer.value,2)
@@ -192,6 +194,8 @@ while on == True:
     speaker_volume = round(vol_potentiometer.value, 2)
     pygame.mixer.music.set_volume(speaker_volume)
     
+    #Volume of tuning white noise
+    tuning_volume = speaker_volume * (1/2)
 
     #If music has stopped, play another song
     if pygame.mixer.music.get_busy() == 0:
